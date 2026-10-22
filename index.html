@@ -74,7 +74,7 @@
   <header>
     <p class="eyebrow">Chrome extension</p>
     <h1>Internet Library Privacy Policy</h1>
-    <p class="dates">Effective 21 October 2026 · Internet Library 0.3.0 and later</p>
+    <p class="dates">Effective 21 October 2026 · Internet Library 0.4.0 and later</p>
   </header>
 
   <section class="short" aria-labelledby="short">
@@ -128,6 +128,7 @@
           <tr><td>Your settings</td><td>Quality, volume, mouse sensitivity and the other choices in the menu, plus the screen resolution that runs smoothly on your computer.</td><td>Until you change them or uninstall</td></tr>
           <tr><td>Your last five searches</td><td>Shown on the library's computer so you can search them again.</td><td>Until replaced by newer searches</td></tr>
           <tr><td>Your place in the library</td><td>Your search and where you were standing when you left to visit a book, so the Back button returns you there.</td><td>Removed as soon as you return; cleared when the tab closes</td></tr>
+          <tr><td>Recent search results</td><td>What the search services answered for your recent searches and the library's subjects, so they fill your shelves at once the next time, even in a new tab. Kept to about 150 MB.</td><td>Three days, then deleted</td></tr>
           <tr><td>Desk textures</td><td>Pictures of the desk's wood, signs and rugs, saved after they are first drawn so later tabs open faster. They contain nothing about you.</td><td>Until you uninstall</td></tr>
         </tbody>
       </table>
@@ -138,7 +139,7 @@
     <h2 id="permissions">What the extension's permissions are used for</h2>
     <ul>
       <li><strong>Access to the search services above</strong> lets the new tab read their results. The extension asks for no other sites and cannot read the pages you browse.</li>
-      <li><strong>Changing network requests</strong> is used for one thing. Google forbids its results page from being shown inside another page, so for the library's own tab only, the extension removes the two response headers that forbid it. No other request, tab or site is affected.</li>
+      <li><strong>Changing network requests</strong> is used for one thing. Google forbids its results page from being shown inside another page, so for the library's own tab only, the extension removes the response headers by which Google forbids it (and the one that would report it). No other request, tab or site is affected.</li>
       <li><strong>The script on Google's search pages</strong> reads result titles and links only inside the library's hidden frame. It checks for a code the library adds to the frame's address and does nothing on Google pages you open yourself.</li>
     </ul>
   </section>
